@@ -1,0 +1,41 @@
+selection{
+    border: 1px solid blue;
+}
+
+article{
+    height: 100px;
+    border: 1px solid red;
+}
+
+/* 직계 자식 선택자 */
+.first > h3 {
+    color: white;
+    background-color: violet;
+}
+
+.second > h3 {
+    color: midnightblue;
+    background-color: beige;
+}
+
+.first li {
+    font-size: 10px;
+}
+
+.first > article > ul > li {
+    font-size: 10px;
+}
+
+/* 인접형제 */
+#fairy + li {
+    background-color: aqua;
+    color: blue;
+}
+
+#fairy ~ li {
+    background-color: red;
+    color: white;
+}
+
+/* 일치선택자 */
+atricle.first
