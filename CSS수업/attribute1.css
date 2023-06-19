@@ -1,0 +1,44 @@
+/* font-family: 'Grandiflora One', serif; */
+.font-link{
+    font-family: 'Grandiflora One', serif;
+}
+/* .font-link{이 사이에 css 복사한 거 넣기} */
+
+/* 이 밑으로는 임포트 방식 html/css 따로
+가져와서 복붙 후에 font-family넣어주기 */
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-import{
+    font-family: 'Grandiflora One', serif;
+}
+
+
+.noonnu-font{
+    font-family: 'SUITE-Regular';
+}
+
+.container {
+    width: 500px;
+    background-color: aliceblue;
+}
+
+.sentences {
+    font-weight: 100;
+    font-size: 16px;
+
+    text-align: center;
+    text-decoration: line-through;
+    /* underline, overline 도 있음 */
+}
+
+.a {
+    text-decoration: none;
+    color:black;
+}
+

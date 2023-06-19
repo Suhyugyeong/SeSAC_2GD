@@ -1,0 +1,22 @@
+.stripes> * {
+    background-color: navy;
+    color: white;
+}
+/* 스펠링 확인 잘! */
+.stripes>div:nth-of-type(2) {
+    background-color:yellow;
+    color:navy;
+}
+
+.stripes>div:nth-child(4n+2){
+    background-color: yellow;
+    color: navy;
+}
+
+.box::before{
+    content: "택시";
+}
+
+.box::after{
+    content: "빨리";
+}

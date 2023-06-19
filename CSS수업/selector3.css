@@ -1,0 +1,104 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: skyblue;
+    line-height: 200px;
+}
+/* 가상클래스 선택자
+hover, active, visited, focus, checked 
+E:hover{}:요소에 마우스가 올라가 있는 동안
+E:active{}:요소에 마우스클릭 혹은 엔터 눌리는 동안
+E:focus{}요소에 포커스가 머물러 있는 동안
+E:visited{}요소가 링크일 때, 방문했다면 스타일 변경/적용속성이 제한적임(a태그)
+E:checked{}요소가 체크되었을 때(radio, checkbox)
+*/
+
+.div1:hover {
+    background-color: yellow;
+    height: 150px;
+}
+
+.div:active {
+    background-color: orange;
+    width: 150px;
+}
+
+input:focus{
+    background-color: blue;
+    color: white;
+    outline-color: aqua;
+}
+
+a:visited {
+    color: #ccc;
+
+}
+
+input#rabbit:checked + label {
+    background-color: palevioletred;
+    color:white;
+}
+
+/* 
+    E:first-child {} : E가 첫번째 자식이라면
+    E:last-child {} : e가 마지막 자식이라면
+    E:nth-child(n) {} : e가 n번째 자식이라면
+    E:nth-of-type(n) {} : e 요소 중에 n번째를 선택 
+    E:not(XYZ) {} : XYZ가 아닌 e요소를 선택
+*/
+
+    .zoo > * {
+        background-color: green;
+        color: white;
+        font-size: 20px;
+    }
+
+    .zoo > li:last-child{
+        background-color: black;
+    }
+
+    .zoo> li:first-child{
+        background-color: yellow;
+    }
+
+    .zoo> li:nth-of-type(1){
+        background-color: blue;
+    }
+
+    .zoo > *:first-child{
+        background-color: yellowgreen;
+    }
+    /* zoo 옆에 > 사용시 어떤건 띄어쓰기? 
+    어떤 건 띄어쓰기 안 하는데... */
+
+    .zoo > li:nth-child(2n+1){
+        background-color: pink;
+    }
+
+/* 가상요소선택자 */
+/* ::after, ::before 두 개밖에 없음 */
+
+.h3{
+    background-color: yellow;
+}
+
+.h3::after{
+    content: " after";
+    color: gray;
+}
+.h3::before{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 50px;
+    background-color: red;
+}
+/* 글자보다는 배지, 모양, 이미지를 많이 사용 */
+.box::before{
+    content: "택시";
+}
+
+.box::after{
+    content: "빨리";
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사각 가운데 정렬 + 테두리실습</title>
+    <link rel="stylesheet" href="./center.css">
+    <!-- <style>
+        div{
+            /* width가 명확하게 처리 되어야지
+            margin이 제대로 작동
+            자동으로 마진값 계산해서 중앙->반드시 가로 넓이 지정해야함 */
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            margin: calc(50% - 50px) auto;
+        }
+    </style> -->
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+</style>
+</head>
+<body>
+    <!-- <div>SeSAC</div> -->
+    <div class="width">width</div>
+    <div class="style">style</div>
+    <div class="color">color</div>
+    <div class="border">border</div>
+
+
+    <hr />
+    <h2>border-radius</h2>
+    <div class="square rounded"></div>
+
+    <hr />
+    <h2>box-sizing</h2>
+    <div class="square box-sizing content-box"></div>
+    <div class="square box-sizing border-box"></div>
+
+<br />
+<!-- 마지막 실습 -->
+<div class="square">original</div>
+<div class="square d-none">d-none</div>
+<div class="square invisible">invisible</div>
+<div class="square opacity-0">opacity-0</div>
+<div class="square">original</div>
+
+<div class="ma"></div>
+
+</body>
+</html>
