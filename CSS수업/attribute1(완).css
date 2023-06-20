@@ -1,4 +1,4 @@
-/* font-family: 'Grandiflora One', serif; */
+font-family: 'Grandiflora One', serif; */
 .font-link{
     font-family: 'Grandiflora One', serif;
 }
@@ -7,6 +7,7 @@
 /* 이 밑으로는 임포트 방식 html/css 따로
 가져와서 복붙 후에 font-family넣어주기 */
 @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+
 @font-face {
     font-family: 'SUITE-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
@@ -34,11 +35,18 @@
 
     text-align: center;
     text-decoration: line-through;
-    /* underline, overline 도 있음 */
 }
-
+    /* underline, overline 도 있음 */
 .a {
     text-decoration: none;
     color:black;
 }
 
+/* 구글 링크방식은 +눌러서 내가 선택한 폰트 꼭 확인!(여기서 몰라서 자꾸 되돌아감)
+link는 html에 복붙, css에 적용할 부분에 font-family작성
+
+그 외 구글, 눈누 임포트 방식은 CSS 복붙
+(그전에 반드시 html에 CSS링크를 걸어줘야함
+@로 시작하는 imprt 방식을 복붙한 후에
+구글은 앞에 style 태그 지워주어야 함
+마지막으로 css에 적용할 부분에 font-family 작성하면 됨*/
