@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>속성선택자 실습</title>
     <style>
+
         [disabled]{
             background-color: red;
         }
@@ -16,11 +17,15 @@
         /* [value]{
             background-color: blue;
         } */
-        input:not(placeholder){
+        /* input:not([placeholder]){
+            background-color: blue;
+        } */
+        /* placeholder가 아닌 것을 선택할 때 나는 value로 했으나,
+        input:not([])으로 작성하는 방법이 있음.
+        input:not()대괄호 없이 쓰면 전체 다 적용되는데...? */
+        input:not([placeholder]){
             background-color: blue;
         }
-        /* placeholder가 아닌 것을 선택할 때 나는 value로 했으나,
-        input:not([])으로 작성하는 방법이 있음. */
     </style>
 </head>
 

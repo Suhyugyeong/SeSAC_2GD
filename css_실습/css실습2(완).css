@@ -1,22 +1,28 @@
 p.lion{
     background-color: red;
 }
+
 li#tiger{
     background-color: yellow;
 }
-ul > .lion{
-    color:sienna
-}
+/* #은 id선택 */
+
 #tiger + li{
     background-color: skyblue;
 }
+
 .lion ~ li{
     background-color: orange;
 }
+
 ul .lion{
     background-color: greenyellow;
     font-weight:bold;
 }
+/* background color 범위 차이는
+span이면 문자만
+list면 한줄 전체 */
+
 .lion{
     color:sienna
 }
