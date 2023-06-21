@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자1</title>
+    <style>
+        form {
+        width: 400px;
+        }
+        /* hover */
+        /* focus */
+        textarea {
+        width: 100%;
+        }
+        /* checked */
+        /* active */
+        button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+        }
+        input#red:checked + label {
+            background-color: red;
+            color: white;
+        }
+        input#blue:checked + label {
+            background-color: blue;
+            color: white;
+        }
+        input#yellow:checked + label {
+            background-color: yellow;
+            color: black;
+        }
+        /* 이 부분 잘 이해 못함. 
+        그냥 외우자...ㅠㅠ*/
+
+        /* textarea {
+            width: 300px;
+            height:100px;
+        } */
+        
+        h3:hover {
+        background-color: black;
+        color: white;
+        }
+        /* hover는 마우스 가져다대는 동안 */
+
+        textarea:focus {
+        background-color: rgb(243, 199, 205);
+        }
+        /* focus는 클릭하면 계속 */
+
+        button:active {
+        float: right;
+        padding: 5px 15px;
+        background-color: gray;
+        color: #f96666;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+        }   
+        /* active는 마우스로 클릭하는 동안 */
+    </style>
+
+</head>
+<body>
+    <form>
+    <h3>건의 사항을 적어주세요!</h3>
+    <textarea cols:"50" rows:"10">건의사항</textarea>
+    <!-- 왜 숫자에 빨간색이 뜰까? -->
+    <br />
+    <input type="checkbox" name="one" id="red"><label for="red">빨강</label>
+    <input type="checkbox" name="two" id="blue"><label for="blue">파랑</label>
+    <input type="checkbox" name="three" id="yellow"><label for="yellow">노랑</label>
+    <br />
+    <button>제출</button>
+    </form>
+</body>
+</html>

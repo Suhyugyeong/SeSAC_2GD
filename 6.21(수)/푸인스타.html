@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>푸 인스타</title>
+    <style>
+      div {
+        border-radius: 50%;
+      }
+      /* radius 값으로 원형 만듦 */
+      .circle {
+        background: linear-gradient(30deg, yellow, hotpink, purple);
+        width: 100px;
+        height: 100px;
+      }
+      .pooh {
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        background-size: contain;
+        /* background-size contain
+        은 요소의 더 짧은 너비에!*/
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-repeat */
+        background-image: url("img/pooh.png");
+        /* background이미지는 원형, 그 안에 img는 다른거 맞지? */
+        position: relative;
+        top: 5px;
+        left: 5px;
+        border: 5px solid white;
+        box-sizing: border-box;
+        /* border를 주는 순간 padding 값이 늘어서 옆으로 밀리는 현상이 발견
+        이럴 때는 box-sizing을 border-box로 하여 조절 */
+
+        /* 불러오는 방법 여러개
+        기억하기! */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="pooh"></div>
+    </div>
+  </body>
+</html>

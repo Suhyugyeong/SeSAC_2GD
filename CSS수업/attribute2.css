@@ -12,8 +12,8 @@
     border: 1px solid blue;
     width: 100px;
     height: 100px;
-    margin: 20px;
     padding: 30px;
+    margin: 20px;
 }
 
 .d-inline-block{
@@ -22,9 +22,11 @@
     border: 1px solid gray;
     width: 100px;
     height: 100px;
-    margin: 20px;
     padding: 30px;
-}
+    margin: 40px;
+} */
+/* block, inline, inline-box 형태 확인 */
+
 
 /* min, max */
 .parent{
@@ -35,8 +37,8 @@
 
 .parent .min{
     min-width: 400px;
-    height: 100ox;
     background-color: red;
+    height: 100px;
 }
 
 .parent .max{
@@ -45,7 +47,7 @@
     height: 100px;
 }
 
-.box{
+/* .box{
     background-color: yellow;
     border: 1px solid black;
 }
@@ -73,12 +75,12 @@
 
 .em{
     font-size: 2em;
-}
+} */
 /* 32 64 128px em은 
 부모의 크기 받아옴 
 점점 커지기 때문에 주의해서 사용하기*/ */
 
-.square img[alt='푸']{
+/* .square img[alt='푸']{
     width: 200px;
 }
 
@@ -95,4 +97,4 @@
     overflow: visible;
 }
 
-.overflow-hidden{}
+.overflow-hidden{} */

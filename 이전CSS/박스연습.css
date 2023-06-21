@@ -1,0 +1,78 @@
+.suqare {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  cursor: pointer;
+  /* 여기서 cursor:pinter 무슨 의미? */
+}
+.rounded {
+  border-radius: 30px;
+  /* border-radius: 10%;
+    border-radius: 5px 40px;
+    border-radius: 5px 20px 40px;
+    border-radius: 5px 20px 30px 50px; */
+}
+/* h2에서 square,rounded를 따로
+ 나누어서 적용한건가? 
+ 띄어쓰기해서 한꺼번에는 적용 안됨.
+ 인식이 안 됨.*/
+
+/* 실습 전혀 */
+
+.box-sizing {
+  padding: 20px;
+  border: 15px solid red;
+  background-color: tomato;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+/* border-box, content-box 차이
+블로그에 정리해둠
+둘다 box-sizing의 속성값이고
+border는 설정값보다 적어질 수 있고
+content는 설정값보다 커질 수 있다. */
+
+/* 마지막 실습 */
+.d-none {
+  /* display: none; */
+  /* display: none;하면 
+    아예 화면에서 없어짐 */
+  background-color: red;
+}
+
+.invisible {
+  /* visibility: hidden; */
+  /* visibility: hidden;하면
+    자리는 유지하고 공백으로 바뀜 */
+  background-color: orangered;
+}
+
+.opacity-0 {
+  /* opacity: 0; */
+  /* opacity: 0;은 
+    자리는 유지 공백으로 바뀜
+    그럼 hidden이랑 무슨 차이임?
+    hidden은 모습과 속성을 숨기고 자리차지
+    opacity0은 모습 숨기고 속성 남고 자리차지 */
+  background-color: tomato;
+}
+
+.ma {
+  width: 200px;
+  height: 200px;
+  /* 사각형 크기 설정 */
+  background-color: blue;
+}
+
+.ma:hover {
+  opacity: 0;
+}
+/* hover는 정말 많이 씀. 
+    따로 빼서 써야함 */

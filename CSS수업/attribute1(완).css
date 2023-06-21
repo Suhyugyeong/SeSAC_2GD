@@ -42,7 +42,8 @@ font-family: 'Grandiflora One', serif; */
     color:black;
 }
 
-/* 구글 링크방식은 +눌러서 내가 선택한 폰트 꼭 확인!(여기서 몰라서 자꾸 되돌아감)
+/* 구글 링크방식은 +눌러서 내가 선택한 폰트 꼭 확인!
+(여기서 몰라서 자꾸 되돌아감)
 link는 html에 복붙, css에 적용할 부분에 font-family작성
 
 그 외 구글, 눈누 임포트 방식은 CSS 복붙
