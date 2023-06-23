@@ -14,7 +14,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/* 화면에 딱 붙게 */
 
 ul {
   margin: 0;
@@ -41,50 +40,36 @@ header {
 /* header1 */
 .header1 {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: green;
 }
-
+/* 헤더의 아래 span,li자식을 가진 ul에 적용
+그러면 li는 묶여있는 얘들 */
 .header1 > ul {
   display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: center;
 }
-/* align-items???????? */
-
-.header1 > ul > li {
-  padding-left: 20px;
+/*
+원래는 display는 block임 위아래 
+정렬하려는 박스의 부모에게 값을 줘야함
+내가 움직이고 싶은 박스 li의 부모는 ul임*/
+.header1 .menus li {
+  margin-left: 10px;
 }
 
 /* header2 */
-.header2 {
-}
-.header2 > ul {
-  width: 100%;
-  height: 100%;
-  align-items: center;
+
+.header2 .menus {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* background-color: yellow; */
+  line-height: 300%;
 }
-/* center값은 세로기준
-list는 문자에대한 블록
-height값을 조절해서 가운데조절할 수 있도록 */
-
+/* background-color 설정해보면 헤더1은 배경 높이 그대로
+헤더2는 글자감싸는 배경이 작음.
+그래서 height를 조절해주는 것 같긴한데.
+line-height를 300으로 줘도 됨.*/
 /* header3 */
 .header3 {
-  display: flex;
-  align-items: center;
-}
-/* align items으로 세로에서 가운데 */
-.header3 > ul {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.header3 > ul > li {
-  padding-right: 20px;
 }
