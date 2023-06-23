@@ -1,0 +1,74 @@
+.container {
+  width: 400px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-end;
+}
+/* 마진을 주는 건 바디 기준으로 컨테이너를 정렬하기 위해 줌 
+    아이템과 상관 없음 */
+/* flex-direction에 4개 
+    display flex일때 걸어줄 수 있는 값임*/
+/* justify-content는 주축에 대한 정렬방법
+아이템을 어떻게 배치시킬 것인지
+space-around는 양끝 영역이 1이라면,
+아이템과 아이템 사이 영역은 2
+*/
+.items {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px;
+}
+/* align-items는 height가 없어야지 가능 */
+
+.item1 {
+  background-color: red;
+}
+.item2 {
+  background-color: orange;
+}
+.item3 {
+  background-color: yellow;
+}
+.item4 {
+  background-color: green;
+}
+.item5 {
+  background-color: blue;
+}
+
+.container2 {
+  background-color: #333;
+  width: 100%;
+  height: 400px;
+  margin: 1rem 0;
+  display: flex;
+}
+
+.container2 .item3 {
+  /* order: 1;
+  align-self: flex-end; */
+  flex-shrink: 2;
+}
+/* 교차축 기준으로 아이템 정렬됨
+align-self 
+두 개는 간단히 알아두셈*/
+.container2 .item2 {
+  /* font-size: 12px; */
+  /* line-height: 1; */
+  flex-shrink: 1;
+}
+.container2 .items {
+  /* width: 200px; */
+  /* flex-basis: 200px; */
+  /* width: 50px; */
+}
+.container2 .item3 {
+}

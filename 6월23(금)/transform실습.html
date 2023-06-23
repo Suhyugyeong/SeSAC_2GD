@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        box-sizing: border-box;
+        /* 이거 꼭 해줘야 하나?*/
+        border: 1px solid black;
+        cursor: pointer;
+        transition: 2s;
+        /* 화면 올라가면 화살표가 아닌 손가락으로 바뀜 */
+      }
+      body {
+        perspective: 500px;
+      }
+      .box1:hover {
+        /* transform: translate(50px); scale(2) */
+        width: 200px;
+      }
+      /* 제자리에서 두배 늘어남
+      기준점이 중앙으로 되어있기 때문에
+      마우스빠질때는 트랜지션 안 되니까 걍 div에 거셈 */
+      /* transform이랑 width 중에 하나만 적용할 것 */
+
+      .box2:hover {
+        transform: translate(50px) skewX(-45deg);
+      }
+
+      .box3:hover {
+        background-color: red;
+        border-radius: 50%;
+        transform: translateX(300px) rotate(360deg);
+      }
+
+      .box4:hover {
+        background-color: yellow;
+        transform: translateY(50px) rotateY(360deg) scale(2);
+      }
+      /* perspective는 부모 요소에 써야 함 */
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </body>
+</html>
