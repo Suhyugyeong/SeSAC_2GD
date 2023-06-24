@@ -9,6 +9,8 @@
   font-size: 20px;
   font-weight: 700;
 }
+/* box-sizing은 패딩값,보더값을
+요소에 포함시키는 걸 의미 */
 
 body {
   margin: 0;
@@ -42,7 +44,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: green;
 }
 /* 헤더의 아래 span,li자식을 가진 ul에 적용
 그러면 li는 묶여있는 얘들 */
@@ -63,13 +64,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: yellow; */
   line-height: 300%;
+  /* height: 100%; */
 }
 /* background-color 설정해보면 헤더1은 배경 높이 그대로
 헤더2는 글자감싸는 배경이 작음.
 그래서 height를 조절해주는 것 같긴한데.
 line-height를 300으로 줘도 됨.*/
 /* header3 */
+
 .header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header3 > ul {
+  display: flex;
+}
+
+.header3 > ul > li {
+  margin-left: 20px;
 }
