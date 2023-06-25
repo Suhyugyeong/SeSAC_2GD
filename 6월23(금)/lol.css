@@ -1,0 +1,124 @@
+.first {
+  background-color: gray;
+  width: 800px;
+  height: 650px;
+  transform: translateX(360px);
+}
+/* translate는 무슨 감으로 하는건가? */
+.first .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.first .boxes .box {
+  background-color: black;
+  border: 2px solid gray;
+  width: 80px;
+  height: 80px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 30px 30px 10px;
+}
+
+.first .boxes .box:hover {
+  border: 2px solid orange;
+}
+
+.first .boxes .box .image {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  display: flex;
+}
+.first .boxes .box:nth-child(1) .image {
+  background-image: url(./images/01.png);
+}
+.first .boxes .box:nth-child(2) .image {
+  background-image: url(./images/02.png);
+}
+.first .boxes .box:nth-child(3) .image {
+  background-image: url(./images/03.png);
+}
+.first .boxes .box:nth-child(4) .image {
+  background-image: url(./images/04.png);
+}
+.first .boxes .box:nth-child(5) .image {
+  background-image: url(./images/05.png);
+}
+.first .boxes .box:nth-child(6) .image {
+  background-image: url(./images/06.png);
+}
+.first .boxes .box:nth-child(7) .image {
+  background-image: url(./images/07.png);
+}
+.first .boxes .box:nth-child(8) .image {
+  background-image: url(./images/08.png);
+}
+.first .boxes .box:nth-child(9) .image {
+  background-image: url(./images/09.png);
+}
+.first .boxes .box:nth-child(10) .image {
+  background-image: url(./images/10.png);
+}
+.first .boxes .box:nth-child(11) .image {
+  background-image: url(./images/11.png);
+}
+.first .boxes .box:nth-child(12) .image {
+  background-image: url(./images/12.png);
+}
+.first .boxes .box:nth-child(13) .image {
+  background-image: url(./images/13.png);
+}
+.first .boxes .box:nth-child(14) .image {
+  background-image: url(./images/14.png);
+}
+.first .boxes .box:nth-child(15) .image {
+  background-image: url(./images/15.png);
+}
+.first .boxes .box:nth-child(16) .image {
+  background-image: url(./images/16.png);
+}
+.first .boxes .box:nth-child(17) .image {
+  background-image: url(./images/17.png);
+}
+.first .boxes .box:nth-child(18) .image {
+  background-image: url(./images/18.png);
+}
+.first .boxes .box:nth-child(19) .image {
+  background-image: url(./images/19.png);
+}
+.first .boxes .box:nth-child(20) .image {
+  background-image: url(./images/20.png);
+}
+.first .boxes .box:nth-child(21) .image {
+  background-image: url(./images/21.png);
+}
+.first .boxes .box:nth-child(22) .image {
+  background-image: url(./images/22.png);
+}
+.first .boxes .box:nth-child(23) .image {
+  background-image: url(./images/23.png);
+}
+.first .boxes .box:nth-child(24) .image {
+  background-image: url(./images/24.png);
+}
+.first .boxes .box:nth-child(25) .image {
+  background-image: url(./images/25.png);
+}
+.first .boxes .box:nth-child(26) .image {
+  background-image: url(./images/26.png);
+}
+.first .boxes .box:nth-child(27) .image {
+  background-image: url(./images/27.png);
+}
+.first .boxes .box:nth-child(28) .image {
+  background-image: url(./images/28.png);
+}
+.first .boxes .box:nth-child(29) .image {
+  background-image: url(./images/29.png);
+}
+.first .boxes .box:nth-child(30) .image {
+  background-image: url(./images/30.png);
+}

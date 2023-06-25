@@ -58,14 +58,12 @@ header {
   margin-left: 10px;
 }
 
-/* header2 */
-
 .header2 .menus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 300%;
-  /* height: 100%; */
+  /* line-height: 300%; */
+  height: 100%;
 }
 /* background-color 설정해보면 헤더1은 배경 높이 그대로
 헤더2는 글자감싸는 배경이 작음.

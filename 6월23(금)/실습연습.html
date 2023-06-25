@@ -11,21 +11,24 @@
         width: 100px;
         height: 100px;
         background-color: green;
+        /* box-sizing: border-box; */
         border: 2px solid black;
         cursor: pointer;
         transition: 1.5s;
         /* transform: perspective(100px); */
+        /* transform-origin: 0% 0%; */
+        /* transform-origin으로는 1만 됨 */
       }
 
       .box1:hover {
         transform: translateX(100px);
         transform: scaleX(2);
       }
-
       .box2:hover {
         /* transform: translateX(50px); */
 
         transform: skewX(-45deg);
+        /* transform-origin: left bottom; */
       }
 
       .box3:hover {
