@@ -11,24 +11,23 @@
         width: 100px;
         height: 100px;
         background-color: green;
-        /* box-sizing: border-box; */
+        box-sizing: border-box;
         border: 2px solid black;
         cursor: pointer;
         transition: 1.5s;
         /* transform: perspective(100px); */
-        /* transform-origin: 0% 0%; */
-        /* transform-origin으로는 1만 됨 */
       }
 
       .box1:hover {
-        transform: translateX(100px);
-        transform: scaleX(2);
+        width: 200px;
       }
+      /* width 값을 주는게 정석,
+      transform을 줄 때 한번에 줘야 함 여러개 쓰지마셈
+      그리고 translateX로 고정하고 싶을 땐 걍 0px주셈 
+      대신 부모 요소에 transform-origin 0%값을 줘야되는데
+      그러면 box2,3,4 다 영향을 받음*/
       .box2:hover {
-        /* transform: translateX(50px); */
-
-        transform: skewX(-45deg);
-        /* transform-origin: left bottom; */
+        transform: translateX(50px) skewX(-45deg);
       }
 
       .box3:hover {

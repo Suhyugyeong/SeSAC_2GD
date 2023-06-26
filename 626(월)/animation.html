@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ani 7</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        position: relative;
+        animation-name: one;
+        animation-duration: 2s;
+
+        animation-timing-function: linear;
+        animation-delay: 1.5s;
+      }
+      @keyframes one {
+        0% {
+          left: 0px;
+        }
+        25% {
+          left: 100px;
+        }
+        50% {
+          left: 200px;
+        }
+        75% {
+          left: 100px;
+        }
+        100% {
+          left: 0;
+        }
+      }
+      .ball {
+        position: relative;
+        /* 이동시키겠다는 의미 */
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: orange;
+        animation: two 1s ease-out infinite alternate;
+      }
+      /* alternate가 뭐 */
+      @keyframes two {
+        to {
+          top: 0px;
+        }
+        from {
+          top: 100px;
+        }
+      }
+
+      .ball2 {
+        width: 50px;
+        height: 50px;
+        background-color: grey;
+        position: absolute;
+        left: 200px;
+        border-radius: 50%;
+        animation: three 1s infinite;
+      }
+
+      @keyframes three {
+        to,
+        from {
+          bottom: 0;
+          /* 뷰포트기준 */
+          animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: 300px;
+          animation-timing-function: ease-in;
+          background-color: palevioletred;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="ball"></div>
+    <div class="ball2"></div>
+  </body>
+</html>

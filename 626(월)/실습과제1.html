@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 예제</title>
+    <style>
+      /* .container {
+        display: flex;
+        flex-direction: column;
+      } */
+      .container .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        border: 1px solid red;
+        border-radius: 10%;
+        margin: 20px;
+      }
+
+      @media screen and (min-width: 700px) {
+        .container {
+          display: flex;
+        }
+        .container .box {
+          background-color: black;
+        }
+      }
+      /* 
+      @media screen and (min-width: 700px) {
+        .container {
+          flex-direction: row;
+        }
+        .container .box {
+          background-color: black;
+        }
+      } */
+      /* 바꿀 속성만 적으면 됨. 
+      리더님은 flex-direction으로 하셨고
+      나는 원래값은 display값을 놔두고 바뀌는 것에만 flex를 줌*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

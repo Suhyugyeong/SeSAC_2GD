@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형</title>
+    <style>
+      body {
+        background-color: olivedrab;
+      }
+      h2 {
+        display: none;
+      }
+
+      @media screen and (max-width: 700px) {
+        body {
+          background-color: violet;
+        }
+        h1 {ㄴ
+          color: white;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        body {
+          background-color: white;
+        }
+        h1 {
+          color: hotpink;
+        }
+      }
+      @media (max-width: 300px) {
+        body {
+          background-color: yellow;
+        }
+        h2 {
+          display: block;
+        }
+        h1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <h2>휴대폰용 hello world</h2>
+  </body>
+</html>
