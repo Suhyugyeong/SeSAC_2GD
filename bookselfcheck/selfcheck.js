@@ -55,8 +55,8 @@ console.log(arr2);
 
 //20<= num <=22 정수 20<= num < 23
 //0~3
-console.log(Math.floor(Mate.random() * 3));
-console.log(Math.floor(Mate.random() * 3) + 20);
+console.log(Math.floor(Math.random() * 3));
+console.log(Math.floor(Math.random() * 3) + 20);
 
 // 난수 생성 -> random number
 // 0<= num <1
@@ -74,6 +74,13 @@ console.log(Math.floor(Math.random() * 11));
 // 20<= x<=22 정수 20<= x <23
 // 0 ~ 3
 // 0<=x<1
-// 0<=x<3
+// 20<=x<23
 console.log(Math.floor(Math.random() * 3));
+
 console.log(Math.floor(Math.random() * 3) + 20);
+console.log(Math.floor(Math.random) * 256);
+const a = Math.floor(Math.random() * 256);
+const b = Math.floor(Math.random() * 256);
+const c = Math.floor(Math.random() * 256);
+//0 ~ <256
+console.log(`rgb(${a},${b},${c})`);
