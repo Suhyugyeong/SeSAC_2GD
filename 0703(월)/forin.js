@@ -106,6 +106,7 @@ console.log(Math.floor(Math.random() * 11));
 // 0<=x<3
 console.log(Math.floor(Math.random() * 3));
 console.log(Math.floor(Math.random() * 3) + 20);
+//랜덤하게 번호를 줄때 사용
 
 const areaNum = {
   Seoul: "02",

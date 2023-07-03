@@ -1,15 +1,37 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "NanumBarunGothic", sans-serif;
-}
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-.firstheader > li {
+.inner {
+  background-color: antiquewhite;
+  width: 100vw;
+  height: 100px;
+  border: 0.1px solid rgb(182, 179, 179);
+}
+.mainmenu .inner {
+  width: 100vw;
   display: flex;
+}
+.inner > ul {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.inner > ul > li {
+  background-color: tan;
+}
+
+s.stussyconverse {
+  background-color: yellow;
+}
+
+.logo {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  background-image: url(./image/pngwing.com.png);
+  background-repeat: no-repeat;
+  z-index: 999;
 }
