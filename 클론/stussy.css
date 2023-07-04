@@ -1,66 +1,72 @@
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-  margin:0;
+body {
+  margin: 0;
   padding: 0;
 }
-ul{
-  margin:0;
+ul {
+  margin: 0;
   padding: 0;
-}
-li {
   list-style: none;
 }
-.firsthead{
-  background-color: antiquewhite;
-  width: 100vw;
-  height: 30px;
-}
-.menu1{
+/* 헤더1 */
+.firsthead {
   display: flex;
-  justify-content: center;
-  }
-  .menu1 > li {
-      background-color: yellow;
-      width: 10px;
-      height: 10px;
-      text-align: center;
-  }
-  .menu2 {
-      display: flex;
-      justify-content: center;
-  }
-  .menu2 > li {
-      background-color: pink;
-      width: 10px;
-      height: 10px;
-      text-align: center;
-  }
-.secondhead{
+  background-color: antiquewhite;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+/* 여기서 어떻게 justify-content 값을 
+줘야할지 모르겟음 .right에 flex-end를 주면 
+안 되는 이유가 뭐임? 자식요소라서?
+그럼 어케 옮김?*/
+.menu1 {
+  display: flex;
+}
+.menu1 > li {
+  background-color: yellow;
+  margin-left: 10px;
+}
+/* .firsthead2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} */
+
+.right {
+  background-color: yellowgreen;
+  margin-left: 10px;
+  /* justify-content: flex-end; */
+}
+
+/* 헤더2 */
+.secondhead {
+  display: flex;
   background-color: rgb(143, 92, 30);
-  width: 100vw;
-  height: 50px;
+  justify-content: flex-start;
+  align-items: center;
 }
 .menu3 {
   display: flex;
-  justify-content: space-around;
-  }
-  .menu3 > li {
-      background-color: purple;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      margin-left: 10px;
-      justify-content: space-around;
-  }
-.onearticle{
+}
+/* 여기에 flex를 줘야 자식 li가 플렉스 */
+
+.menu3 > li {
+  background-color: purple;
+  margin-left: 20px;
+}
+/* 메인 사진 */
+.onearticle {
   display: flex;
   background-color: brown;
   width: 100vw;
-  height: 750px;
+  height: 500px;
 }
-.firstfooter{
+/* 푸터1 */
+.firstfooter {
+  display: flex;
+  justify-content: space-between;
   background-color: aquamarine;
   width: 100vw;
   height: 50px;
@@ -69,41 +75,27 @@ li {
   display: flex;
 }
 .menu4 > li {
-  background-color: blue;
-  width: 10px;
-  height: 10px;
-  padding: 10px
-  text-align: center;
+  background-color: lightcoral;
+  margin-left: 10px;
 }
 .sns {
-  display: flex;
+  background-color: hotpink;
 }
-.sns > li {
-  background-color: black;
-  width: 10px;
-  height: 10px;
-  padding: 10px
-  text-align: center;
-}
+/* 푸터2 */
 .secondfooter {
+  display: flex;
+  justify-content: space-evenly;
   background-color: aqua;
-  width: 100vw;
-  height: 50px;
+  align-items: center;
 }
-.menu5, .reserved {
+.menu5 {
   display: flex;
 }
+
 .menu5 > li {
   background-color: orange;
-  width: 10px;
-  height: 10px;
-  padding: 10px
-  text-align: center;
+  margin-left: 10px;
 }
-.reserved > li {
-  background-color: green;
-  width: 30px;
-  height: 10px;
-  padding: 10px
-  text-align: center;
+.stussy {
+  background-color: lightsalmon;
 }
