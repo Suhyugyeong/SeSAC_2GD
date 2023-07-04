@@ -28,17 +28,23 @@ ul {
   background-color: yellow;
   margin-left: 10px;
 }
+
+.right {
+  background-color: lightblue;
+  margin-left: 10px;
+}
+
 /* .firsthead2 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 } */
 
-.right {
+/* .right {
   background-color: yellowgreen;
   margin-left: 10px;
-  /* justify-content: flex-end; */
-}
+  
+} */
 
 /* 헤더2 */
 .secondhead {
