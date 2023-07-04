@@ -57,7 +57,7 @@ header {
 .header1 .menus li {
   margin-left: 10px;
 }
-
+/* header2 */
 .header2 .menus {
   display: flex;
   justify-content: space-between;
@@ -69,6 +69,7 @@ header {
 헤더2는 글자감싸는 배경이 작음.
 그래서 height를 조절해주는 것 같긴한데.
 line-height를 300으로 줘도 됨.*/
+
 /* header3 */
 
 .header3 {

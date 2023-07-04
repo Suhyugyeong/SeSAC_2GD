@@ -1,37 +1,109 @@
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+  padding: 0;
+}
+ul{
+  margin:0;
+  padding: 0;
+}
 li {
   list-style: none;
 }
-a {
-  text-decoration: none;
-}
-.inner {
+.firsthead{
   background-color: antiquewhite;
   width: 100vw;
-  height: 100px;
-  border: 0.1px solid rgb(182, 179, 179);
+  height: 30px;
 }
-.mainmenu .inner {
-  width: 100vw;
-  display: flex;
-}
-.inner > ul {
+.menu1{
   display: flex;
   justify-content: center;
+  }
+  .menu1 > li {
+      background-color: yellow;
+      width: 10px;
+      height: 10px;
+      text-align: center;
+  }
+  .menu2 {
+      display: flex;
+      justify-content: center;
+  }
+  .menu2 > li {
+      background-color: pink;
+      width: 10px;
+      height: 10px;
+      text-align: center;
+  }
+.secondhead{
+  background-color: rgb(143, 92, 30);
   width: 100vw;
+  height: 50px;
 }
-.inner > ul > li {
-  background-color: tan;
+.menu3 {
+  display: flex;
+  justify-content: space-around;
+  }
+  .menu3 > li {
+      background-color: purple;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin-left: 10px;
+      justify-content: space-around;
+  }
+.onearticle{
+  display: flex;
+  background-color: brown;
+  width: 100vw;
+  height: 750px;
 }
-
-s.stussyconverse {
-  background-color: yellow;
+.firstfooter{
+  background-color: aquamarine;
+  width: 100vw;
+  height: 50px;
 }
-
-.logo {
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  background-image: url(./image/pngwing.com.png);
-  background-repeat: no-repeat;
-  z-index: 999;
+.menu4 {
+  display: flex;
+}
+.menu4 > li {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  padding: 10px
+  text-align: center;
+}
+.sns {
+  display: flex;
+}
+.sns > li {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  padding: 10px
+  text-align: center;
+}
+.secondfooter {
+  background-color: aqua;
+  width: 100vw;
+  height: 50px;
+}
+.menu5, .reserved {
+  display: flex;
+}
+.menu5 > li {
+  background-color: orange;
+  width: 10px;
+  height: 10px;
+  padding: 10px
+  text-align: center;
+}
+.reserved > li {
+  background-color: green;
+  width: 30px;
+  height: 10px;
+  padding: 10px
+  text-align: center;
 }
