@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* 헤더1 */
+.firsthead {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: space-between;
+}
+/* 부모요소에서 전체정렬 */
+.leftmenu {
+  display: flex;
+  background-color: aqua;
+}
+
+.menu1 {
+  display: flex;
+}
+.menu1 > li {
+  background-color: yellow;
+  margin-left: 10px;
+}
+.rightmenu {
+  display: flex;
+}
+.right {
+  background-color: lightblue;
+  margin-left: 10px;
+}

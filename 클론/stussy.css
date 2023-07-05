@@ -15,18 +15,26 @@ ul {
   display: flex;
   background-color: antiquewhite;
   /* justify-content: space-between; */
-  align-items: center;
 }
 /* 여기서 어떻게 justify-content 값을 
 줘야할지 모르겟음 .right에 flex-end를 주면 
 안 되는 이유가 뭐임? 자식요소라서?
 그럼 어케 옮김?*/
+
+.rightmenu1 {
+  display: flex;
+}
 .menu1 {
   display: flex;
 }
 .menu1 > li {
   background-color: yellow;
   margin-left: 10px;
+}
+
+.rightmenu {
+  display: flex;
+  justify-content: space-around;
 }
 
 .right {

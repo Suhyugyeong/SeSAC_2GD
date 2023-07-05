@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+  </head>
+  <body>
+    <div>민트 초코는 <span>겁나</span> <span id="span">맛있다>.<</span></div>
+
+    <h3>속성 변경해보기</h3>
+    <img src="./img/pooh.png" alt="푸" width="300" id="pooh" />
+    <p>이요르</p>
+
+    <script>
+      //리더님 방법
+      document.querySelector("span").innerText = "맛없다??";
+
+      //   내 방법
+      const span = document.getElementById("span");
+      span.innerText = "맛없다~.~";
+      //   selector의 구체적인 그룹과 일치하는 document안 첫번째 엘리먼트를 반환한다.
+      //   일치하는게 없으면 null반환한다.
+      //   span이 두 개 있으면? []인덱스 사용
+
+      //내 방법
+      const pooh = document.getElementById("pooh");
+      pooh.setAttribute("src", "./img/eeyore.png");
+      pooh.setAttribute("alt", "이요르");
+      pooh.setAttribute("width", "150");
+      //모든 건 요소를 선택한 다음에 할 수 있는거임!!!!
+
+      //리더님 방법
+      const img = document.querySelector("img");
+      img.src = "./img/eeyore.png";
+      img.alt = "이요르";
+      img.setAttribute("width", "150");
+    </script>
+  </body>
+</html>
