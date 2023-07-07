@@ -105,61 +105,42 @@
         "뮤! 넌 내거야",
         "오레오 쿠키 앤 크림",
       ];
-      // let createtag = document.createElement("img");
-      // createtag.setAttribute("src", "./img/icecream1.png");
-      //사진 랜덤하게 주는 방법, 나는 일일이 주는 방법으로 함
+      //배열 인덱스 값으로 불러오기
 
-      // section.classList.add("img-box");
-      // section.classList.add("text-center");
-      // section.classList.add("article-box");
-      //여기에 for문을 안 썼고
-      // const img = document.createElement("img");
-      // const h3 = document.createElement("h3");
-      // const div = document.createElement("div");
-      // const article = document.createElement("article");
-      // document.article.append(img, div, h3);
-      // document.section.append(article);
-      //append 붙일 때 앞에 document 안 붙여도 됨
-
-      //정답*************************
-      for (let i = 0; i < icecreams.length; i++) {
-        //여기서 icecreams 대신에 9줘도 상관없음
+      //요소 9개 만들기
+      for (let i = 0; i < 9; i++) {
         const article = document.createElement("article");
         const img = document.createElement("img");
-        const h3 = document.createElement("h3");
-        const name = document.createElement("div");
-        //태그 생성을 위해 createElement를 씀
-        //여기까지는 html 변화없음
-        //여기서 변수이름은 name이지만 태그는 div태그임
-        //여기서 먼저 9개의 태그들을 만들어주고
+        const h3 = document.createComment("h3");
+        const div = document.createElement("div");
 
-        // img 속성 추가 및 CSS 적용(클래스 추가)
+        //이미지 필수 속성 src
+        //1~9까지 반복 백틱을 이용할 것. 변수를 알기 위해 리터럴
         img.setAttribute("src", `./img/icecream${i + 1}.png`);
-        img.setAttribute("alt", `icecream${i + 1} 사진`);
+        //이미지 속성
+        img.setAttribute("alt", "./img/icecream${i + 1}");
         img.classList.add("img-box");
-        //원형 + 아이스크림 이미지
-        //img-box 클래스 더해주니까 원형
-        //여기까지도 html 변화없음
+        //이미지 클래스 완
 
-        // h3
-        h3.textContent = `Top${i + 1}`;
+        //h3 속성은 따로 없음 text-center라는 클래스와 top1~9
+        //요소 만들고 text-content로 추가
+        h3.textContent = `top${i + 1}`;
         h3.classList.add("text-center");
-        //top숫자
-        //text-center는 스타일값에서 중앙정렬로 맞춘 것임
 
-        // div
-        name.innerText = icecreams[i];
-        name.classList.add("text-center");
+        //div test-center라는 클래스와 []배열 안 아이스크림 종류가 바뀜. 0~8
+        div.innerText = icecreams[i];
+        div.classList.add("text-center");
+        //배열 접근하기 위해선 배열 이름에 먼저 접근
+
+        //만들어준 img. h3. div 안에 article에 자식 요소로 넣어주기
+        article.append(img, h3, div);
+        //article완료 되면 section에 갖다 붙이면 됨.
         article.classList.add("article-box");
-        //사각형 + 체리쥬빌레
-        //아이스크림 이름은 인덱스 0부터 시작하니까 i그대로 주면 됨
-
-        // append
-        article.append(img, h3, name);
+        //article에도 클래스를 부여해줘야 함
         section.append(article);
-        //자식으로 주기 위해서 예를 들어, section의 자식 article
-        //끄면 안 보임
       }
+      //9대신에 icecream.length 써도 됨
+      //section 자식으로 article/ article 자식으로 img h3 div 순서로 총 9개 article필요
     </script>
   </body>
 </html>
