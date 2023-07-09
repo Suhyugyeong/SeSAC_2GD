@@ -14,7 +14,7 @@ btn1.addEventListener("mouseover", function () {
 
 /* btn2 */
 const container = document.getElementById("container");
-// 이게 왜 버튼 2에서 만들었는지??
+// 이게 왜 버튼 2에서 만들었는지??**********************************************************
 
 btn2.addEventListener("click", () => {
   const div = document.createElement("div");
@@ -30,7 +30,7 @@ function changeColor() {
     div.style.backgroundColor = "skyblue";
   }
   divs[divs.length - 1].style.backgroundColor = "red";
-  //여기서 왜 divs.length에서 -1을 해야되는지 ??
+  //여기서 왜 divs.length에서 -1을 해야되는지 ??*********************************************
 }
 
 btn3.addEventListener("click", changeColor);

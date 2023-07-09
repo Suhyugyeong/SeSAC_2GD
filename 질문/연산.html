@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 13. 계산기</title>
+  </head>
+  <body>
+    <h1>계산기 만들기</h1>
+    <form>
+      <label for="value1">값1:</label>
+      <input type="number" id="value1" /><br />
+      <label for="value2">값2:</label>
+      <input type="number" id="value2" /><br />
+      <label for="operator">연산자: </label>
+      <input type="text" id="operator" /><br />
+      <button type="button" onclick="cal();">계산</button>
+      <button type="button" onclick="reset();">초기화</button><br /><br />
+      <label for="result">결과: </label>
+      <input type="text" id="result" disabled="true" value="value 속성" />
+      <!-- 
+        disabled 속성은 해당 input을 비활성화 하여, 사용자가 클릭할 수 없게 하는 속성입니다.
+        계산의 결과 값이 사용자에 의해 변경되는 것을 막기 위해 "disabled" 속성을 추가했습니다.
+      -->
+    </form>
+
+    <script>
+      console.log(document.querySelector("[disabled]").value);
+      //여기서 이 식의 의미가 이해되지 않아..............******************************
+      // TODO: practice13_설명.png 이미지의 조건을 만족하는 js 코드 작성
+      // cal(), reset() 함수를 미리 정의해두었습니다.
+
+      // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+      function cal() {
+        let v1 = Number(document.getElementById("value1").value);
+        let v2 = Number(document.getElementById("value2").value);
+        //여기서 .value로 이미 숫자로 가져온 거 아님? 이걸 왜 앞에 굳이 또 Number를 붙여야 됨?**************
+        let op = document.querySelector("#operator").value;
+
+        let result;
+        if (op === "+") {
+          result = v1 + v2;
+        } else if (op === "-") {
+          result = v1 - v2;
+        } else if (op === "*") {
+          result = v1 * v2;
+        } else if (op === "/") {
+          result = v1 / v2;
+        } else {
+          result = "연산자가 아니에요";
+        }
+
+        document.getElementById("result").value = result;
+        //어기서 result = document.getElementById("result").value; 랑 똑같은거 아님? 왜 답 안 나옴?****************************
+      }
+
+      // [초기화] 버튼 클릭시 reset() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+      function reset() {
+        document.getElementById("value1").value = "2";
+        document.getElementById("value2").value = "3";
+        document.getElementById("operator").value = "4";
+        document.getElementById("result").value = "3";
+      }
+      //이 값 없어도 reset은 되는데 굳이 왜 쓰는거임??*************************************************
+      //이게 공백처리 대신 숫자넣어도 제대로 되고 함수 선언도 밑에서 해줬는데 이걸 막아도 초기화가 되는 이유가 뭐임??******************************
+
+      //여기까진 써봄
+      //   function cal() {
+      //     let value1 = document.querySelector("#value1");
+      //     value1 = value1.value;
+      //     //(#value1).value 라고 해도 됨. 같은 괄호 안에 넣으면 클래스로 인식
+      //     let value2 = document.querySelector("#value2");
+      //     value2 = value2.value;
+      //     let operator = document.querySelector("#operator");
+      //     operator = operator.value;
+      //     if (operator === "+") {
+      //       result = Number(value1) + Number(value2);
+      //     } else if (operator === "-") {
+      //       result = Number(value1) - Number(value2);
+      //     } else if (operator === "/") {
+      //       result = Number(value1) / Number(value2);
+      //     } else if (operator === "*") {
+      //       result = Number(value1) * Number(value2);
+      //     }
+      //   }
+      //   console.log(result);
+    </script>
+  </body>
+</html>
