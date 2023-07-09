@@ -174,14 +174,3 @@ console.log(findResult);
 // 중괄호를 쓰지 않았을 때는 return이 필요 없음!
 let findResult2 = multiArr.find((el) => el > 7);
 console.log(findResult2);
-
-const areaNum = {
-  Seoul: "02",
-  Incheon: "032",
-  Daejeon: "042",
-  Busan: "051",
-  Ulsan: "052",
-  Daegu: "053",
-  Gwangju: "062",
-  Jeju: "064",
-};
