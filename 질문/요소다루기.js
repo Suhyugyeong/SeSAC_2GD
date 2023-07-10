@@ -1,10 +1,4 @@
 const div1 = document.getElementById("div1");
-/* 
-1. 태그 내부 내용
- - innerText : 요소안의 텍스트를 가져오거나 수정
- - innerHTML : 요소안의 '코드'를 가져오거나 수정
- - textContent : innerText 처럼 텍스트 정보 표시
-*/
 
 console.log(div1.textContent);
 console.log(div1.innerText);
@@ -17,12 +11,7 @@ div1.textContent = "    여기는 <b>첫번째</b> div 태그입니다! &hearts;
 console.log(div1.textContent);
 
 /* 2. 속성 */
-/* 
- - setAttribute() : 속성값 설정
- - getAttribute() : 속성값 가져오기
- - 점(.)으로 접근하고 속성값도 변경할 수 있음
-*/
-// 메소드로 속성에 접근후 변경
+
 const naver = document.getElementById("naver");
 const pooh = document.querySelector("#pooh");
 naver.setAttribute("href", "https://www.google.com");
@@ -38,33 +27,18 @@ pooh.alt = "푸 사진입니다!!!!";
 const h1 = document.querySelector("h1");
 const list = document.querySelectorAll("li");
 // 3-1. style 속성 사용
-// for (let li of list) {
-//   console.log(li);
-//   li.style.backgroundColor = "pink";
-//   li.style.color = "#fff";
-//   li.style.fontSize = "1.3rem";
-// }
 
 // 3-2. classList 사용
 console.log(h1.classList);
 
 h1.classList.add("add-h1");
-// h1.classList.remove("add-h1");
 console.log(h1.classList.contains("add-h1"));
 
-/* if (h1.classList.contains("add-h1")) {
-    h1.classList.remove("add-h1");
-} else {
-    h1.classList.add("add-h1");
-}
-
-h1.classList.toggle("add-h1");
-*/
-// li 태그(4개)에 friends 클래스 추가해보기
 for (let el of list) {
   el.classList.add("friends");
 }
-//이부분이 잘 이해가 안 됨 . el element... 무슨 뜻인지??**************************************
+//이부분이 잘 이해가 안 됨 . el=element... 무슨 뜻인지??**************************************
+
 /* 4. 요소 생성, 추가, 삭제, 접근 */
 // 4-0. 요소에 접근하기
 const friends = document.getElementById("friends");

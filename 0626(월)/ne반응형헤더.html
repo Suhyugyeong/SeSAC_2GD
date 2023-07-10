@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>반응형 헤더 만들기</title>
     <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/db8355f1ee.js"
       crossorigin="anonymous"
     ></script>
@@ -34,13 +39,21 @@
         justify-content: center; */
       }
       /* LOGO */
-      header .inner i {
+      header .inner .i {
         position: absolute;
         top: 40px;
         left: 100px;
         transform: scale(2);
         color: white;
       }
+      header .inner .fa-bars {
+        position: absolute;
+        top: 40px;
+        left: 90%;
+        transform: scale(2);
+        color: white;
+      }
+      /* 폰트 어썸에서 추가한 메뉴바 */
       header .inner .menu {
         display: flex;
         justify-content: center;
@@ -97,6 +110,7 @@
     <header>
       <div class="inner">
         <i class="fa-solid fa-certificate"></i>
+
         <ul class="menu">
           <li>메뉴1</li>
           <li>메뉴2</li>
@@ -104,6 +118,7 @@
           <li>메뉴4</li>
         </ul>
       </div>
+      <i class="fa-solid fa-bars"></i>
 
       <ul class="small-menu">
         <li>메뉴1</li>
@@ -112,5 +127,17 @@
         <li>메뉴4</li>
       </ul>
     </header>
+    <script>
+      const bar = document.querySelector(".fa-bars");
+      const hudemenu = document.querySelector(".small-menu");
+      bar.addEventListener("click", () => {
+        hidemenu.classList.toggle("click");
+      });
+      $(".fa-bars").click(function () {
+        $(".small-menu").show();
+      });
+
+      //toggle 아니고 hide가 아니고 show도 아니고
+    </script>
   </body>
 </html>

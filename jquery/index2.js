@@ -62,3 +62,101 @@ function changeHtmlJs() {
 function changeHtmlJq() {
   $(".p-html").html("jq로 변경 &hearts;");
 }
+
+//요소추가하기
+// function appendJs() {
+//   let ul = document.querySelector(".colors");
+//   let li = document.createElement("li");
+//   li.innerText = "마지막 자식으로 추가 될 js";
+//   ul.append(li);
+// }
+// function appendJq() {
+//   $(".colors").append("<li>마지막 자식으로 추가 될 jq</li>");
+// }
+//"" 안의 내용이 태그로 읽히나 js에서는 문자열로 읽힘
+
+function prependJs() {
+  let ul = document.querySelector(".colors");
+  let li = document.createElement("li");
+  li.innerHTML = "<h4>첫 자식으로 추가된 js</h1>";
+  //innerHTML이랑 inner Text차이 알겠져
+  ul.prepend(li);
+}
+function prependJq() {
+  $(".colors").prepend("<h4>첫 자식으로 추가된 jq</h4>");
+}
+
+function beforeJs() {
+  let green = document.querySelector(".green");
+  let li = document.createElement("li");
+  li.innerText = "이전 형제 요소로 추가된 js";
+  green.before(li);
+}
+//green 앞에 형제로 찍힘
+function beforeJq() {
+  $(".green").before("이전 형제 요소로 추가된 jq");
+}
+
+function afterJs() {
+  let green = document.querySelector(".green");
+  let li = document.createElement("li");
+  li.innerText = "이후 형제 요소로 추가된 js";
+  green.after(li);
+}
+function afterJq() {
+  $(".green").after("이후 형제 요소로 추가된 jq");
+}
+
+function removeJs() {
+  let li2 = document.querySelector("#li2");
+  li2.remove();
+}
+
+function removeJq() {
+  $("#li2").remove();
+  //지울 거 선택 후 메소드 이어주면 됨
+}
+
+function emptyJs() {
+  let nums = document.querySelector("ul.nums");
+  nums.innerHTML = "";
+}
+function emptyJq() {
+  $(".nums").empty();
+}
+
+//요소탐색
+function findParent() {
+  console.log($(".child2").parent());
+}
+//child2 부모 콘솔창에 출력
+function findParents() {
+  console.log($(".child2").parents());
+}
+function findNext() {
+  console.log($(".child2").next());
+}
+function findPrev() {
+  console.log($(".child2").prev());
+}
+function findChildren() {
+  console.log($(".parent").children());
+  //parent  자식요소 출력
+}
+//여기 잘 이해 안 됨************************************************
+//메소드니까 괄호 꼭 쳐주셈
+
+//클래스 조작
+function addClass() {
+  $("#hi").addClass("fs-50");
+}
+function removeClass() {
+  $("#hi").removeClass("fs-50");
+}
+function hasClass() {
+  console.log($("#hi").hasClass("fs-50"));
+}
+//contains랑 같이 t,f로 나옴
+function toggleClass() {
+  $("#hi").toggleClass("bg-pink");
+}

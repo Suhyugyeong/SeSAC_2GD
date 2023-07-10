@@ -20,15 +20,6 @@
     <ul class="comment-list"></ul>
 
     <script>
-      // TODO: 아래 조건을 만족하도록 js 파일을 수정하기
-      // 문제
-      // - [ ] 아이디 input과 댓글 input을 입력하고 [등록] 버튼을 누르면, 댓글이 추가됩니다.
-      //     - 폼을 "제출"헸을 때에 해당하는 이벤트는 무엇인가요?
-      // - [ ] 아이디 값과 댓글 값을 가져와야 합니다.
-      // - [ ] <li> 태그를 새로 만들고, "아이디 - 댓글내용" 형식이 되도록 설정합니다.
-      // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
-      // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
-
       const form = document.querySelector("form");
       const list = document.querySelector(".comment-list");
       form.addEventListener("submit", (e) => {
@@ -47,23 +38,6 @@
         comment.value = "";
         //이걸 통해 입력창초기화가능. 이게 submit이 일어났을 때 userid랑 comment가 공백이 되는거임
       });
-
-      //답***
-      // const form = document.querySelector("form");
-      // const list = document.querySelector(".comment-list");
-      // form.addEventListener("submit", (e) => {
-      //   e.preventDefault();
-
-      //   const userId = form.querySelector('[name="userid"]');
-      //   const comment = form.querySelector('[name="comment"]');
-
-      //   const li = document.createElement("li");
-      //   li.innerHTML = `<b>${userId.value}</b> - ${comment.value}`;
-      //   list.append(li);
-
-      //   userId.value = ""; // 입력창 초기화
-      //   comment.value = "";
-      // });
     </script>
   </body>
 </html>

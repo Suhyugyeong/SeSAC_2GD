@@ -35,7 +35,8 @@
 
       const spans = document.querySelectorAll("span");
       for (let i = 0; i < spans.length; i++) {
-        // 여기서 i가 spans.length보다 작아야 하는 이유? 왜 <=는 안 되는지?*************************
+        // 여기서 i가 왜 0부터 시작하고, spans.length보다 작아야 하는 이유? 왜 <=는 안 되는지?*************************
+        //8개의 span이 있음. i=1부터 하고 i<=8 해도 되는거임?
         console.log(spans[i]);
         spans[i].style.color = "blueviolet";
         spans[i].style.fontWeight = "bold";

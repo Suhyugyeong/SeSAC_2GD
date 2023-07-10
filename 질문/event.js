@@ -13,9 +13,10 @@ btn1.addEventListener("mouseover", function () {
 });
 
 /* btn2 */
-const container = document.getElementById("container");
+// const container = document.getElementById("container");
 // 이게 왜 버튼 2에서 만들었는지??**********************************************************
-
+//버튼2를 누르면 버튼4 아래에 생성되는거니까?
+//이거 없어도 크게 상관이 없는 것 같은데??
 btn2.addEventListener("click", () => {
   const div = document.createElement("div");
   div.innerText = "안녕";
@@ -26,6 +27,7 @@ btn2.addEventListener("click", () => {
 /* btn3 */
 function changeColor() {
   const divs = document.querySelectorAll("#container div");
+  //아이디가 container인 div의 자식요소로 생성되는거임???************************************
   for (let div of divs) {
     div.style.backgroundColor = "skyblue";
   }
