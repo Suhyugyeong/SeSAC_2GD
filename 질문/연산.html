@@ -16,7 +16,7 @@
       <label for="operator">연산자: </label>
       <input type="text" id="operator" /><br />
       <button type="button" onclick="cal();">계산</button>
-      <button type="button" onclick="reset();">초기화</button><br /><br />
+      <button type="button" onclick="resett();">초기화</button><br /><br />
       <label for="result">결과: </label>
       <input type="text" id="result" disabled="true" value="value 속성" />
       <!-- 
@@ -26,7 +26,8 @@
     </form>
 
     <script>
-      console.log(document.querySelector("[disabled]").value);
+      console.log(document.querySelector("[disabled]").value); //value 속성
+      console.log();
       //여기서 이 식의 의미가 이해되지 않아..............******************************
 
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
@@ -54,10 +55,10 @@
       }
 
       function reset() {
-        document.getElementById("value1").value = "2";
-        document.getElementById("value2").value = "3";
-        document.getElementById("operator").value = "4";
-        document.getElementById("result").value = "3";
+        document.getElementById("value1").value = "";
+        document.getElementById("value2").value = "";
+        document.getElementById("operator").value = "";
+        document.getElementById("result").value = "";
       }
       //이 값 없어도 reset은 되는데 굳이 왜 쓰는거임??*************************************************
       //이게 원래는 공백처리되어있었는데

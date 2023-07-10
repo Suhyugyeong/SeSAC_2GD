@@ -37,6 +37,14 @@ console.log(h1.classList.contains("add-h1"));
 for (let el of list) {
   el.classList.add("friends");
 }
+
+for (let i = 0; i < list.length; i++) {
+  console.log(list[i]);
+}
+// [1, 2, 3, 4, 5];
+for (let el of list) {
+  console.log(el);
+}
 //이부분이 잘 이해가 안 됨 . el=element... 무슨 뜻인지??**************************************
 
 /* 4. 요소 생성, 추가, 삭제, 접근 */
