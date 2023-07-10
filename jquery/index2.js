@@ -8,6 +8,7 @@ function getValue() {
 function setValue() {
   $("input").val("설정 완료 ~~");
 }
+//여기서 input 값은 어디로 가고 그냥 설정완료가 뜨는거?********************
 
 /* css() 사용 */
 function changeCssJs() {
@@ -57,28 +58,30 @@ function changeTextJq() {
 function changeHtmlJs() {
   let p = document.querySelector(".p-html");
   p.innerHTML = "js 로 변경 &hearts;";
+  console.log(changeHtmlJs);
 }
 
 function changeHtmlJq() {
   $(".p-html").html("jq로 변경 &hearts;");
 }
+//text랑 html이랑 하트 표시를 제대로 하는지만 봐도 비교 가능
 
 //요소추가하기
-// function appendJs() {
-//   let ul = document.querySelector(".colors");
-//   let li = document.createElement("li");
-//   li.innerText = "마지막 자식으로 추가 될 js";
-//   ul.append(li);
-// }
-// function appendJq() {
-//   $(".colors").append("<li>마지막 자식으로 추가 될 jq</li>");
-// }
+function appendJs() {
+  let ul = document.querySelector(".colors");
+  let li = document.createElement("li");
+  li.innerText = "마지막 자식으로 추가 될 js";
+  ul.append(li);
+}
+function appendJq() {
+  $(".colors").append("<li>마지막 자식으로 추가 될 jq</li>");
+}
 //"" 안의 내용이 태그로 읽히나 js에서는 문자열로 읽힘
 
 function prependJs() {
   let ul = document.querySelector(".colors");
   let li = document.createElement("li");
-  li.innerHTML = "<h4>첫 자식으로 추가된 js</h1>";
+  li.innerHTML = "<h4>첫 자식으로 추가된 js</h4>";
   //innerHTML이랑 inner Text차이 알겠져
   ul.prepend(li);
 }
@@ -143,13 +146,13 @@ function findChildren() {
   console.log($(".parent").children());
   //parent  자식요소 출력
 }
-//여기 잘 이해 안 됨************************************************
 //메소드니까 괄호 꼭 쳐주셈
 
-//클래스 조작
+//클래스 조작 jq로
 function addClass() {
   $("#hi").addClass("fs-50");
 }
+//style시트 같은 거 적용시킬 때  addClass로
 function removeClass() {
   $("#hi").removeClass("fs-50");
 }

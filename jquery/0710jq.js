@@ -1,5 +1,6 @@
 console.log(window);
 console.log($(window));
+//ce.fn.init로 뜸 제이쿼리는
 
 console.log(document);
 console.log($(document));
@@ -8,7 +9,7 @@ console.log($(document));
 //클릭
 $(".p-msg").on("click", function () {
   $(".p-msg").css("color", "blue");
-  $(this).css("color", "blue");
+  // $(this).css("color", "blue");
 });
 
 $(".p-msg").click(function () {
