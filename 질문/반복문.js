@@ -29,3 +29,17 @@ if (number > 10) {
   console.log("10이거나 10보다 작음");
 }
 //여기서 숫자가 아닌 문자를 입력해도 답이 나오는데 엄격하게 숫자만 받을 수 있는 방법은?
+
+function helloworld1() {
+  console.log("hello world1");
+}
+helloworld1();
+//콘솔에 뜨게 하려면 console.log만 찍으면 되는거 아님? 위에서부터의 과정이 좀 이해가 안 감. console.log 말고 helloworld1에 "hello world1" 값을 줄 수 있는
+//다른 방법이 있지 않음???? console.log에 찍는다고 해서 이게 helloworld1의 함수 값으로 들어가는거임?
+
+function helloworld2() {
+  return "hello world2";
+}
+console.log(helloworld2());
+//return은 function과 다르게 console.log를 찍을 수 있음. return아래 console.log 적어도 적용 안 됨.
+//이게 무슨 말이야?*********************************************************
