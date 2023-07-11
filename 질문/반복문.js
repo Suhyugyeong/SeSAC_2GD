@@ -43,3 +43,11 @@ function helloworld2() {
 console.log(helloworld2());
 //return은 function과 다르게 console.log를 찍을 수 있음. return아래 console.log 적어도 적용 안 됨.
 //이게 무슨 말이야?*********************************************************
+
+let math = prompt("수학점수?");
+let eng = prompt("영어점수?");
+math = Number(math);
+eng = Number(eng);
+let avg = (math + eng) / 2;
+console.log(avg);
+//여기서 그냥 Number주고 value값 안 붙여도 되는 이유가 뭐임?
