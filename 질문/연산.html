@@ -19,10 +19,6 @@
       <button type="button" onclick="resett();">초기화</button><br /><br />
       <label for="result">결과: </label>
       <input type="text" id="result" disabled="true" value="value 속성" />
-      <!-- 
-        disabled 속성은 해당 input을 비활성화 하여, 사용자가 클릭할 수 없게 하는 속성입니다.
-        계산의 결과 값이 사용자에 의해 변경되는 것을 막기 위해 "disabled" 속성을 추가했습니다.
-      -->
     </form>
 
     <script>
@@ -30,11 +26,10 @@
       console.log();
       //여기서 이 식의 의미가 이해되지 않아..............******************************
 
-      // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+   
       function cal() {
         let v1 = Number(document.getElementById("value1").value);
         let v2 = Number(document.getElementById("value2").value);
-        //여기서 .value로 이미 숫자로 가져온 거 아님? 이걸 왜 앞에 굳이 또 Number를 붙여야 됨?**************
         let op = document.querySelector("#operator").value;
 
         let result;
@@ -51,5 +46,7 @@
         }
 
         document.getElementById("result").value = result;
-        //어기서 result = document.getElementById("result").value; 랑 똑같은거 아님? 왜 답 안 나옴?****************************
+        //어기서 result = document.getElementById("result").value; (순서만 바꿈)랑 똑같은거 아님?
+        // 왜 답 안 나옴?****************************
+        //=같다는 의미가 아니라 식을 부여해주는 것임. 바구니에 사과를 넣을것인지, 사과에 바구니를 넣을 것인지의 차이임.
       }
