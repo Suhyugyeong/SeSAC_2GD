@@ -14,32 +14,41 @@ ul {
 .firsthead {
   display: flex;
   background-color: antiquewhite;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  align-items: center;
 }
-/* 여기서 어떻게 justify-content 값을 
-줘야할지 모르겟음 .right에 flex-end를 주면 
-안 되는 이유가 뭐임? 자식요소라서?
-그럼 어케 옮김?*/
-
-.rightmenu1 {
+.mainlo {
+  width: 100px;
+  margin: 10px;
+  padding: 0px;
+}
+/* .mainlogo {
+  background-image: url(./image/pngwing.com.png);
+  width: 100px;
+  margin: 50px;
+  padding: 0px;
+} */
+/* 왜 백그라운드로 하면 안 되고 태그 안에 img로 넣어야 함..?? */
+/* 부모요소에서 전체정렬 */
+.leftmenu {
   display: flex;
+  /* background-color: aqua; */
 }
+
 .menu1 {
   display: flex;
+  align-items: center;
 }
 .menu1 > li {
   background-color: yellow;
   margin-left: 10px;
 }
-
 .rightmenu {
   display: flex;
-  justify-content: space-around;
 }
-
 .right {
   background-color: lightblue;
-  margin-left: 10px;
+  margin-right: 30px;
 }
 
 /* .firsthead2 {
