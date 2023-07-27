@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="checkbox"]:checked {
+        color: red;
+        width: 100px;
+        height: 100px;
+      }
+      /* 인풋 태그에 원래 background나 color 속성을 못 주는거?? */
+      label[for="apple"]:checked {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="apple" />
+    <label for="apple">사과</label>
+    <input type="checkbox" id="banana" />
+    <label for="banana">바나나</label>
+  </body>
+</html>
