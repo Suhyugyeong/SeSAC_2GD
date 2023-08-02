@@ -4,24 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      input[type="checkbox"]:checked {
-        color: red;
-        width: 100px;
-        height: 100px;
-      }
-      /* 인풋 태그에 원래 background나 color 속성을 못 주는거?? */
-      label[for="apple"]:checked {
-        background-color: red;
-        width: 100px;
-        height: 100px;
-      }
-    </style>
   </head>
   <body>
-    <input type="checkbox" id="apple" />
-    <label for="apple">사과</label>
-    <input type="checkbox" id="banana" />
-    <label for="banana">바나나</label>
+    <!-- 현재가 몇 월인지 확인하고, 계절을 구분하는 프로그램을 만드세요. -->
+    <script>
+      // const a = Number(prompt("월을 입력하세요", ""));
+      // if (4 <= a <= 5) {
+      //   alert("봄");
+      // } else if (6 <= a <= 9) {
+      //   alert("여름");
+      // } else if (10 <= a <= 11) {
+      //   alert("가을");
+      // } else {
+      //   alert("겨울");
+      // }
+
+      //위에거는 안 되고
+
+      const b = Number(prompt("월을 입력하세요", ""));
+      if ((3 < b, 6 > b)) {
+        alert("봄");
+      } else if ((5 < b, 10 > b)) {
+        alert("여름");
+      } else if ((11 < b, 12 > b)) {
+        alert("가을");
+      } else {
+        alert("겨울");
+      }
+
+      //문제집에서는 && 사용
+    </script>
   </body>
 </html>
