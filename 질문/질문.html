@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>사용자 입력으로 테이블 생성하기</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <!-- 내가 추가해줌. -->
   </head>
+
   <body>
-    <!-- 현재가 몇 월인지 확인하고, 계절을 구분하는 프로그램을 만드세요. -->
+    <!-- 테이블이 생성될 영역 -->
+    <div id="tableContainer"></div>
+
     <script>
-      // const a = Number(prompt("월을 입력하세요", ""));
-      // if (4 <= a <= 5) {
-      //   alert("봄");
-      // } else if (6 <= a <= 9) {
-      //   alert("여름");
-      // } else if (10 <= a <= 11) {
-      //   alert("가을");
-      // } else {
-      //   alert("겨울");
-      // }
+      // 사용자로부터 행과 열의 개수를 입력받습니다.
+      const rows = parseInt(prompt("생성할 행의 개수를 입력하세요:", "0"), 10);
+      const columns = parseInt(
+        prompt("생성할 열의 개수를 입력하세요:", "0"),
+        10
+      );
+      //10진수가 기본적이다.
 
-      //위에거는 안 되고
+      // 테이블 요소 생성
+      const table = document.createElement("table");
 
-      const b = Number(prompt("월을 입력하세요", ""));
-      if ((3 < b, 6 > b)) {
-        alert("봄");
-      } else if ((5 < b, 10 > b)) {
-        alert("여름");
-      } else if ((11 < b, 12 > b)) {
-        alert("가을");
-      } else {
-        alert("겨울");
+      // 행과 열에 따라 테이블 생성
+      for (let i = 0; i < rows; i++) {
+        const row = document.createElement("tr");
+        for (let j = 0; j < columns; j++) {
+          const cell = document.createElement("td");
+          // cell.textContent = `Row ${i + 1}, Column ${j + 1}`;
+          row.appendChild(cell);
+        }
+        table.appendChild(row);
       }
 
-      //문제집에서는 && 사용
+      // 테이블을 표시할 요소를 선택하여 추가
+      const tableContainer = document.getElementById("tableContainer");
+      tableContainer.appendChild(table);
     </script>
   </body>
 </html>
+
+<!-- 위의 코드를 실행하면, 두 개의 prompt 창이 나타나며 사용자는 생성하고자 하는 행과 열의 개수를 입력할 수 있습니다. 그 후 입력된 값에 따라 테이블이 생성되고, 해당 테이블이 tableContainer라는 id를 가진 div 요소에 추가됩니다.
+
+parseInt() 함수를 사용하여 사용자로부터 입력받은 문자열을 정수로 변환합니다.
+document.createElement() 메서드를 사용하여 table, tr, td 요소를 생성합니다.
+중첩된 반복문을 사용하여 행과 열의 개수에 맞게 테이블을 생성하고, 테이블에 각 셀에 해당하는 td 요소를 추가합니다.
+테이블을 tableContainer 요소에 추가하여 화면에 테이블이 표시되도록 합니다.
+이렇게 하면 사용자가 입력한 행과 열의 개수에 따라 동적으로 테이블이 생성되며, 각 셀에는 해당하는 행과 열 번호가 출력됩니다. -->
