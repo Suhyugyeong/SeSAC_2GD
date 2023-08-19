@@ -24,13 +24,92 @@
       function test33() {
         //1.영문자(대문자, 소문자) 또는 숫자로만 이루어짐
         //단, 첫글자는 반드시 영문자로
-        let regExp = /^[a-z][a-z0-9]+$/i;
-        //대문자도 취급하게 해주는게 i
-        const value = prompt("입력하세요");
+        // let regExp = /^[a-z][a-z0-9]+$/i;
+        // const value = prompt("입력하세요");
+        // if (regExp.test(value)) {
+        //   alert("제대로 입력하셨어요");
+        // } else {
+        //   alert("유효한 형식이 아닙니다.");
+        // }
+        //   const str = "JavaScript JQuery Ajax";
+        //   let regExp = /a/;
+        //   console.log("/a/:" + str.replace(regExp, "+++"));
+        // 첫번째 a 값만 바뀌기 때문에
+        //   regExp = /a/g;
+        //   console.log("/a/g:" + str.replace(regExp, "---"));
+        //  소문자 a만
+        //   regExp = /a/gi;
+        //   console.log("/a/ig : " + str.replace(regExp, "!!!"));
+        //   const str = "JavaScript\nJQuery\nAjax";
+        //   console.log(str);
+        //   let regExp = /^J/;
+        //   console.log(str.replace(regExp, "(***)"));
+        //   regExp = /^J/g;
+        //   console.log(str.replace(regExp, "(***)"));
+        //   regExp = /^J/gm;
+        //   console.log(str.replace(regExp, "(***)"));
+        //  여러줄 비교수행하기 위해선 m이라는 문자까지 추가해줘야함
+      }
+    </script>
+
+    <h3>정규표현식으로 주민번호 확인</h3>
+    주민번호 :
+    <input type="text" placeholder="-포함해서 입력하세요" id="one" />
+    <button onclick="test44();">확인</button>
+    <script>
+      function test44() {
+        //사용자가 입력한 주민번호값
+        const value = document.getElementById("one").value;
+
+        // 1단계 : 6글자-7글자
+        // const regExp = /^......-.......$/;
+        // . : 개행문자를 제외한 모든 문자 한글자
+        //숫자 외의 다른 문자가 와도 글자수만 맞으면 정상입력으로 간주
+
+        // 2단계 : 숫자6글자-[1234]숫자6글자
+
+        /*
+        . : 개행 문자를 제외한 모든 문자(영문, 숫자, 한글, 특수문자)
+        \d : 숫자 ([0-9]와 동일)
+        \D : 숫자를 제외한 모든 문자
+        \w : 영문자, 숫자, _ ([a-zA-Z\d_])
+        \W : 영문자, 숫자, _ 를 제외한 모든 문자
+        \s : 공백문자(띄어쓰기, 탭, 줄바꿈)
+        \S : 공백문자를 제외한 모든 문자
+        <수량 문자>
+        + : 1글자 이상(1글자는 반드시 있어야 됨)
+        * : 0글자 이상 (0글자도 가능)
+        ? : 0글자 아니면 1글자 (다수 불가능)
+
+        {5} : 5글자만 와야함
+        {2,5} : 2글자 이상 5글자 이하
+        {2,} : 2글자 이상은 와야함
+        {,5} : 5글자 이하만 가능 
+        */
+
+        // const regExp = /^\d\d\d\d\d\d-[1-4]\d\d\d\d\d\d$/;
+        // const regExp = /^\d{6}-[1-4]\d{6}$/;
+        //월이나 일에 유효하지 않는 값을 입력해도 정상입력으로 간주하는 문제점이 남아있음
+        //3단계
+        /*
+        -생년(두자리) => \d{2}
+        아무 숫자로 두자리만 채우면 됨
+        -생월(두자리) => (0[1-9]|1[0-2]) | 둘 중에 하나만 만족하면 됨
+        앞자리가 0일 경우, 뒷자리는 1-9까지 가능 => 0[1-9]
+        앞지라가 1일 경우, 뒷자리는 0-2까지 가능 => 1[0-2]
+        -일(두자리) => (0[1-9]|[1-2][0-9]|3[0-1])
+        앞자리가 0일 경우, 뒷자리는 1-9까지 가능 => 0[1-9]
+        앞자리가 1또는 2일 경우 뒷자리는 0-9까지 가능 => [1-2][0-9]
+        앞자리가 3일 경우 뒷자리는 0-1까지 가능 => 3[0-1]
+        
+        */
+        const regExp =
+          /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[1-4]\d{6}$/;
+        //보통 직접 입력받는 경우는 없음
         if (regExp.test(value)) {
-          alert("제대로 입력하셨어요");
+          alert("정상입력");
         } else {
-          alert("유효한 형식이 아닙니다.");
+          alert("잘못입력하셨습니다.");
         }
       }
     </script>
