@@ -67,16 +67,17 @@ ul {
 .secondhead {
   display: flex;
   background-color: rgb(143, 92, 30);
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
 }
 .menu3 {
   display: flex;
+  /* justify-content: space-around; */
 }
 /* 여기에 flex를 줘야 자식 li가 플렉스 */
-
+/* menu3가 아니라 .secondhead에 justify-content를 줘야함 */
 .menu3 > li {
-  background-color: purple;
+  background-color: aliceblue;
   margin-left: 20px;
 }
 /* 메인 사진 */
