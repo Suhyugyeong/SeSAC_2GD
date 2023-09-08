@@ -51,6 +51,10 @@ hr {
   /* background-color: yellow; */
   margin-left: 30px;
 }
+
+.menu1 > li:hover {
+  scale: 1.2;
+}
 .rightmenu {
   display: flex;
 }
@@ -88,6 +92,10 @@ hr {
   /* background-color: aliceblue; */
   margin-left: 20px;
   color: gray;
+}
+
+.menu3 > li:hover {
+  color: black;
 }
 /* 메인 사진 */
 .onearticle {
