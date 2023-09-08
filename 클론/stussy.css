@@ -1,25 +1,33 @@
 * {
   box-sizing: border-box;
+  /* font-family: "Nanum Gothic", sans-serif; */
 }
 body {
   margin: 0;
   padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+hr {
+  border: 0.1px solid rgb(217, 217, 217);
+}
+
 /* 헤더1 */
 .firsthead {
   display: flex;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   justify-content: space-between;
   align-items: center;
 }
 .mainlo {
   width: 50px;
-  margin: 10px;
+  margin: 10px 10px 10px 30px;
   padding: 0px;
 }
 /* .mainlogo {
@@ -41,7 +49,7 @@ ul {
 }
 .menu1 > li {
   /* background-color: yellow; */
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .rightmenu {
   display: flex;
@@ -66,7 +74,7 @@ ul {
 /* 헤더2 */
 .secondhead {
   display: flex;
-  background-color: rgb(143, 92, 30);
+  /* background-color: rgb(143, 92, 30); */
   justify-content: space-around;
   align-items: center;
 }
@@ -79,6 +87,7 @@ ul {
 .menu3 > li {
   /* background-color: aliceblue; */
   margin-left: 20px;
+  color: gray;
 }
 /* 메인 사진 */
 .onearticle {
@@ -93,7 +102,7 @@ ul {
 .firstfooter {
   display: flex;
   justify-content: space-between;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 100vw;
   height: 50px;
 }
@@ -117,7 +126,7 @@ i {
 .secondfooter {
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
+  /* background-color: aqua; */
   align-items: center;
 }
 .menu5 {
