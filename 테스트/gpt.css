@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popup-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.popup-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.popup-trigger:hover .popup-menu {
+  display: block;
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup-menu li {
+  margin-bottom: 5px;
+}
