@@ -100,11 +100,12 @@ hr {
 /* 메인 사진 */
 .onearticle {
   display: flex;
-  background-repeat: space;
-  background-size: cover;
-  width: 100vw;
-  height: 65vh;
-  margin-left: 40px;
+  /* background-repeat: space; */
+  /* background-size: cover; */
+  width: 1000px;
+  height: 600px;
+  margin-left: 350px;
+  /* align-items: center; */
 }
 /* 푸터1 */
 .firstfooter {
